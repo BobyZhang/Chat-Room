@@ -4,8 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 
-var charServer = require('./lib/chat_server');
-charServer.listen(server);
+
 
 var cache = {};
 
@@ -23,6 +22,9 @@ var server = http.createServer(function (req, res) {
 }).listen(3333, function () {
     console.log('server listening on port 3333');
 })
+
+var charServer = require('./lib/chat_server');
+charServer.listen(server);
 
 function send404(res) {
     res.writeHead(404, { 'Contend-Type': 'Text/plain' });
