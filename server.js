@@ -4,6 +4,9 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 
+var charServer = require('./lib/chat_server');
+charServer.listen(server);
+
 var cache = {};
 
 var server = http.createServer(function (req, res) {
