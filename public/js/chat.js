@@ -42,7 +42,9 @@ Chat.prototype.processCommand = function (command) {
     return message;
 }
 
+//
 // load after document loaded finish
+//
 
 var socket = io.connect();
 
